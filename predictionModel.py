@@ -53,8 +53,6 @@ def splitTest(df):
     return data_to_test
 
 
-
-
 #I should delete the time variables, or/and any other variables that add noise to the modeling. I need to check how to find that noise.
 
 def trainModel(data_to_train):

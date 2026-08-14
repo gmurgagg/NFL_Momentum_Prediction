@@ -2,6 +2,7 @@ from pathlib import Path
 from sklearn.ensemble import RandomForestClassifier
 import pandas as pd
 
+
 # Reads data
 def read_file(path):
     path = Path(path).expanduser().resolve()
@@ -10,12 +11,14 @@ def read_file(path):
     df = pd.read_csv(path)
     return df
 
+
 # Selects seasons to train
 def splitTrain(df):
     data_to_train = df[df["season"] < 2025]
     data_to_train = data_to_train.drop(columns="season")
     data_to_train = data_to_train.drop(columns="spread_line")
     return data_to_train
+
 
 # Select seasons to test
 def splitTest(df):
@@ -33,12 +36,14 @@ def trainModel(data_to_train):
     clf.fit(X, y)
     return clf
 
+
 # Separates the "solutions" before running the test.
 def testModel(data_to_test, clf):
     correctY = data_to_test["result"]
     data_to_test = data_to_test.drop(columns="result")
     predictions = clf.predict(data_to_test)
     return [predictions, correctY]
+
 
 # Prints feature importance if true
 def mapImportance(clf, boo):
@@ -50,6 +55,7 @@ def mapImportance(clf, boo):
             mapImp[variables[i]] = importance[i]
         mapImp = dict(sorted(mapImp.items(), key= lambda item: item[1], reverse= True))
         print(mapImp)
+
 
 # Gets result metrics
 def results(test):

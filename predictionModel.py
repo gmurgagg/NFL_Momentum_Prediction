@@ -84,7 +84,7 @@ def results(test):
 
 if __name__ == "__main__":
     base_dir = Path(__file__).resolve().parent
-    rds_path = base_dir / "data" / "randomClfMerge_1.csv"
+    rds_path = base_dir / "data" / "NFL_momentum_data.csv"
     df = read_file(rds_path)
 
     data_to_train = splitTrain(df)

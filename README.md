@@ -7,7 +7,7 @@ A random forest classifier that predicts whether the **home team wins** an NFL g
 | Approach | Accuracy |
 |---|---|
 | Always pick the home team | **53.38%** (150 of 281 games) |
-| Random forest, momentum variables only | **58%** |
+| Random forest, momentum variables only | **60%** |
 | Random forest with Vegas spread line added | **65.83%** |
 | Vegas spread line alone | **65.48%** |
 

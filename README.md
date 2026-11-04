@@ -43,7 +43,7 @@ A random forest classifier that predicts whether the **home team wins** an NFL g
 
 ### Files
 
-- `randomClfMerge.csv`: the cleaned dataset that produced the highest accuracy (58%).
+- `NFL_momentum_data.csv`: the cleaned dataset that produced the highest accuracy (58%).
 - `prediction.model.py`: trains the random forest on 2010 to 2024 and evaluates on 2025.
 
 ### How to run

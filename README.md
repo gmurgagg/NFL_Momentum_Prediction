@@ -55,7 +55,7 @@ A random forest classifier that predicts whether the **home team wins** an NFL g
 2. Put the CSV in a `data/` folder next to the script.
 3. Run:
 
-       python prediction.model.py
+       prediction.model.py
 
 The script prints the success rate, the number of home wins, and the home team only baseline. To see which variables matter most, change `mapImportance(clf, False)` to `True` in the main block.
 
